@@ -1,0 +1,546 @@
+body {
+    font-size: 16px;
+}
+a:hover {
+    text-decoration: normal;
+}
+@a-color: #909090;
+@main-color: #0ba1e4;
+
+// .container {
+//     width: 970px;
+// }
+// @media(max-width: 992px){
+//     .container {
+//         width: 750px;
+//     }
+// }
+// @media(max-width: 768px){
+//     .container {
+//         width: 730px;
+//     }
+// }
+// 导航栏区域
+#nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 0px;
+    border-bottom: 2px solid #45b7ea;
+    z-index: 999;
+    background-color: #fff;
+    
+    .container {
+        @media(min-width: 992px){
+            &{
+                width: 970px;
+            }
+        }
+        .navbar-default {
+            margin-bottom: 0;
+            background-color: #fff;
+            border: none;
+            .navbar-header {
+                .navbar-brand {
+                    padding: 0;
+                    height: 50px;
+                }
+            }
+
+            .navbar-collapse {
+                .navbar-nav {
+                    li {
+                        a {
+                            padding-left: 25px;
+                            padding-right: 25px;
+                            color: @a-color;
+                        }
+
+                        &.active {
+                            a {
+                                position: relative;
+                                background-color: #fff;
+                                color: #45b7ea;
+
+                                &::before {
+                                    content: "";
+                                    display: block;
+                                    width: 20%;
+                                    height: 1px;
+                                    background-color: #45b7ea;
+                                    position: absolute;
+                                    bottom: 8px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                   @media(max-width: 768px){
+                                        & {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// 轮播图区域
+
+#carousel-example-generic {
+    .carousel-indicators {
+        li.active {
+            background-color: skyblue;
+        }
+    }
+
+    .large-image {
+        width: 100%;
+        height: 540px;
+        background-position: center center;
+    }
+
+    .small-image {
+        width: 100%;
+    }
+
+}
+
+// 我们的成绩
+.our {
+    padding: 60px 0;
+
+    .container {
+        .row {
+            div {
+                text-align: center;
+                h2.us {
+                    position: relative;
+                    margin-bottom: 50px;
+                    font-size: 35px;
+                    font-weight: normal;
+                    &::before {
+                        content: "";
+                        display: block;
+                        width: 8%;
+                        height: 2px;
+                        background-color: #45b7ea;
+                        position: absolute;
+                        bottom: -28px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+                h2 {
+                    text-align: center;
+
+                    small {
+                        text-align: center;
+                    }
+                }
+                span {
+                    font-size: 60px;
+                    text-align: center;
+                    color: #0ba1e4;
+                }
+                h4 {
+                    text-align: center;
+                    color: @a-color;
+                }
+            }
+        }
+    }
+}
+
+// 我们的优势
+#advantage {
+    background-color: #e1e1e1;
+    .container {
+        .row {
+            div{
+
+                margin-top: 2px;
+                .our-whyus-item {
+                    margin: 10px 10px;
+                    padding: 10px 20px;
+                    background-color: #fafafa;
+                    text-align: center;
+                    i {
+                        height: 120px;
+                        line-height: 120px;
+                        font-size: 80px;
+                        color: @main-color;
+                    }
+                    h3 {
+                        margin-top: 20px;
+                        line-height: 36px;
+                    }
+                    p {
+                        font-size: 14px;
+                    }
+                    &:hover {
+                        background-color: @main-color;
+                        box-shadow: 0 0 10px 0 @main-color;
+                        color: #fff;
+                        i {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 我们的服务
+
+#serve {
+    .row {
+        >div {
+            >a {
+                display: inline-block;
+                margin-top: 60px;
+                padding: 10px 30px;
+                border: 1px solid @main-color;
+                border-radius: 5px;
+            }
+            .title {
+                margin-bottom: 40px;
+            }
+            .card-area {
+                        padding: 0;
+                        .card-item {
+                            float: left;
+                            width: 25%;
+                            text-align: center;
+                            border: 1px solid #c1c1c1;
+                            background-color: #fafafa;
+                            transition: all .3s;
+                            z-index: -1;
+                            
+                            @media(max-width: 768px){
+                                & {
+                                    width: 100%;
+                                }
+                            }
+                            .card-title {
+                                padding: 20px;
+                                border-bottom: 1px solid #c1c1c1;
+                                h4 {
+                                    color: @main-color;
+                                    font-weight: bold;
+                                }
+                                p {
+                                    margin-bottom: 0;
+                                    font-size: 14px;
+                                }
+                            }
+                            .card-content {
+                                padding: 20px;
+                                p {
+                                    margin-bottom: 30px;
+                                    font-size: 14px;
+                                }
+                                a {
+                                    display: inline-block;
+                                    padding: 5px 20px;
+                                    border: 1px solid @main-color;
+                                    border-radius: 5px;
+                                    font-size: 14px;
+                                    color: black;
+                                }
+                            }
+                            &.active,&:hover {
+                                color: #fff;
+                                box-shadow: 0 0 20px @main-color;
+                                background-color: @main-color;
+                                transform: scale(1.1);
+                                z-index: 888;
+                                h4 {
+                                    color: #fff;
+                                }
+                                a{
+                                    color: #fff;
+                                    border-color: #fff;
+                                }
+                            }
+                        }
+            }
+        }
+        
+    }
+}
+
+// 客户的鼓励
+#guli {
+    background-color: #f5f5f5;
+    .row {
+        >div {
+            .row {
+                >div {
+                    padding: 40px 10px 20px;
+                    .example-popover {
+                        padding: 15px;
+                        border: 1px solid #34a263;
+                        border-radius: 5px;
+                        .top {
+                            position: relative;
+                            h3 {
+                                img {
+                                    position: absolute;
+                                    top: -60px;
+                                    left: 50%;
+                                    transform: translateX(-50%;);
+                                    width: 50px;
+                                    height: 50px;
+                                    border-radius: 50%;
+                                }
+                            }
+                            .content {
+                                font-size: 14px;
+                                p {
+                                    text-align: left;
+                                }
+                                .content-tag {
+                                    height: 20px;
+                                    span {
+                                        float: left;
+                                        display: inline-block;
+                                        padding: 0px 10px;
+                                        color: #fff;
+                                        font-size: 12px;
+                                        background-color: #aaa;
+                                    }
+                                    .address {
+                                        float: right;
+                                        font-size: 12px;
+                                        color: #ccc;
+                                    }
+                                }
+                            }
+                            .arrow {
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    bottom: -23px;
+                                    left: 50%;
+                                    width: 15px;
+                                    height: 15px;
+                                    background-color: #f5f5f5;
+                                    border-right: 1px solid #34a263;
+                                    border-bottom: 1px solid #34a263;
+                                    transform: translateX(-50%) rotate(45deg);
+                                }
+                            }
+                        }
+                    }
+                    >i {
+                        margin-top: 30px;
+                        color: #34a263;
+                        font-size: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//资讯
+#information {
+    .row {
+        >div {
+            .media {
+                margin-top: 40px;
+                text-align: left;
+                .media-left {
+                    padding: 5px;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    a {
+                        img {
+                            width: 110px;
+                            height: 90px;
+                        }
+                    }
+                }
+                .media-body {
+                    padding: 5px;
+                    text-align: left;
+                    h4 {
+                        text-align: left;
+                        color: @main-color;
+                        &:hover {
+                            font-weight: bold;
+                        }
+                        
+                    }
+                    p {
+                        margin-bottom: 0;
+                        font-size: 12px;
+                        color: rgb(185, 182, 182);
+                        span {
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+            >a {
+                display: block;
+                margin-top: 40px;
+                font-size: 20px;
+                color: @main-color;
+                &:hover {
+                    text-decoration: normal;
+                }
+            }
+        }
+    }
+}
+
+// 客户
+#client {
+    background-color: #e1e1e1;
+    .row {
+        >div {
+            .row {
+                >div {
+                    padding-top: 40px;
+                    img {
+                        display: block;
+                        margin-right: 0;
+                        width: 130px;
+                        background-color: #e1e1e1;
+                        border: 1px solid #c1c1c1;
+                        &:hover {
+                            background-color: #fff;
+                            box-shadow: 0 0 10px @main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 更多疑问
+#query {
+    height: 255px;
+    background-image: linear-gradient(to bottom, #0479d3,#5cb7ff);
+    .row {
+        >div {
+            padding: 40px;
+            text-align: center;
+            color: #f5f5f5;
+            h2 {
+                display: inline-block;
+                margin: 0 auto;
+                padding: 20px 30px;
+                font-size: 35px;
+                border-bottom: 2px solid #f5f5f5;
+
+            }
+            p {
+                padding: 10px;
+            }
+            a {
+                display: inline-block;
+                padding: 10px 30px;
+                font-size: 25px;
+                color: #f5f5f5;
+                border: 1px solid #f5f5f5;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+// 底部导航
+#footerNav {
+    padding: 40px 0;
+    background-color: #363636;
+    .row {
+        >div {
+            padding-left: 15px;
+            color: #f5f5f5;
+            border-left:2px solid #f5f5f5;
+            @media(max-width: 768px){
+                & {
+                    margin-bottom: 40px;
+                }
+            }
+            h4 {
+                margin-bottom: 30px;
+            }
+            ul {
+                li {
+                    margin-top: 10px;
+                    a {
+                        color: #f5f5f5;
+                        font-size: 14px;
+                    }
+                }
+            }
+            >img {
+                display: block;
+                // margin: 0 auto;
+                width: 130px;
+                height: 130px;
+                @media(max-width:992px){
+                    & {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    &+p {
+                        margin-top: 10px;
+                        font-size: 12px;
+                    }
+                }
+            }
+            p {
+                margin: 0px;
+                width: auto;
+                // text-align: center;
+            }
+            h2 {
+                margin-top: 10px;
+                margin-bottom: 0;
+                font-size: 25px;
+                @media(max-width:992px){
+                    & {
+                        font-size: 20px;
+                    }
+                }
+                img {
+                    width: 40px;
+                }
+            }
+            &:last-child {
+                border-right: 2px solid #f5f5f5;
+            }
+        }
+    }
+}
+
+// 版权
+#copyright {
+    height: 120px;
+    background-color: #666;
+    text-align: center;
+    font-size: 14px;
+    p {
+        color: #fafafa;
+        margin-top: 20px;
+    }
+    a {
+        display: block;
+        margin-top: 45px;
+        color: #fafafa;
+        &:hover {
+            text-decoration: normal;
+        }
+    }
+}
